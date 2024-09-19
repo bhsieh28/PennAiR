@@ -1,0 +1,6 @@
+For this part of the challenge, I just applied the algorithm I made in part 1 to each video frame. One minor challenge I faced was cleaning
+white noise in the background after the mask and white RGB values were applied to the processed background. I tried adjusting some of my
+bounds on the mask and this helped a little. The major challenge I faced was making sure that the centroid of each shape remained in the
+center, even as other shapes passed by or through the shapes. I tried taking the past position of the previous centroid for the shape and
+using that coordinate for the current centroid if there was a huge jump in the coordinate of the calculated centroid however this did not
+change my video results.

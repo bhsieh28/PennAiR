@@ -1,0 +1,9 @@
+Finally, for part 3, I tried applying the same algorithm that I used for part 2 and part 1 while also modifying my mask to accommodate
+the different colors in the background. The major challenge that I faced during this part was being able to filter out the background
+so I could trace the contours while also maintaining the ability to recognize the shape. My algorithm takes the average color of the
+background and subtracts its value from each pixel. However, some of the pixel values from the shapes like the blue part of the hexagon
+and the ends of the trapezoid were too close in value to the average color and were filtered out in the process. In order to fix this, I
+changed the values of the average color and adjusted the upper and lower limits of the mask. This adjustment worked in helping me identify
+the shapes better but it also resulted in the mask working less effectively at filtering out the background pixels. As a result, my final
+video for this part of the challenge has some extra contours surrounding the shapes from the spots in the background that were not properly
+filtered out.

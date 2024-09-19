@@ -1,0 +1,9 @@
+To complete this part of the challenge, I started by researching how to apply contours to an image in Open CV and how the image needs to
+be processed before contours are applied. I decided to begin by calculating the average color of all the pixels in the image and
+subtracting that value from each pixel in the image. Adding a limit to make sure no negative RGB values existed made all the pixels in the
+image that had similar values to the average value turn black. Additionally, I added a mask to change the value of all pixels that were
+close enough in value to 0 to 0. This made the grass in the background entirely black. Every pixel that wasn’t changed to the color black
+was changed to the color white, allowing all the shapes to contrast well with the black background. Since the image was now entirely black
+and white, I could process it to grayscale and detect the contours as well as draw points at the centroids of each shape. I also added a
+condition to make sure that if the area of the contour drawn was below a limit value, the contour would not be drawn. This was done to
+eliminate any white spots resulting from the processed image.
